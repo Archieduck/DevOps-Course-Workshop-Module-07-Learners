@@ -12,9 +12,7 @@ jobs:
       run: echo 'hello world'
 
     - name: C# build
-      runs-on: ubuntu-latest
       run: dotnet build
 
     - name: C# tests
-      runs-on: ubuntu-latest
       run: dotnet test
