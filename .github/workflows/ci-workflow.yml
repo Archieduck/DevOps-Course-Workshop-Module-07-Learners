@@ -11,11 +11,10 @@ jobs:
     - name: hello
       run: echo 'hello world'
 
-    - name: C# build
-      run: dotnet build
-
-    - name: C# tests
-      run: dotnet test
+    - name: C#
+      run: | 
+      dotnet build
+      dotnet test
 
     - name: typescript 
       working-directory: DotnetTemplate.Web
