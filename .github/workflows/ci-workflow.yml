@@ -19,5 +19,5 @@ jobs:
 
     - name: typescript 
       steps:
-      - uses: /DotnetTemplate.Web
-      - run: npm run build
+      - uses: DotnetTemplate.Web
+      run: npm run build
