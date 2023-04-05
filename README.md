@@ -1,6 +1,6 @@
 # Workshop Module 07
 
-![example workflow](https://github.com/Archieduck/DevOps-Course-Workshop-Module-07-Learners/actions/workflows/ci-workflow.yml/badge.svg?event=push?branch=main)
+![example workflow](https://github.com/Archieduck/DevOps-Course-Workshop-Module-07-Learners/actions/workflows/ci-workflow.yml/badge.svg?branch=main?event=push)
 
 This repository is for learners on Corndel's DevOps apprenticeship.
 
