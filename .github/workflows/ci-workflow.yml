@@ -25,7 +25,8 @@ jobs:
         npm t
 
   notify:
-    name: slack notification 
+    name: slack notification
+    runs-on: ubuntu-latest
     needs: [build]
     
     
