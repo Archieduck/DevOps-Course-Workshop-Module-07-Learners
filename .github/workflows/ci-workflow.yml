@@ -18,6 +18,5 @@ jobs:
       run: dotnet test
 
     - name: typescript 
-      steps:
-      - uses: DotnetTemplate.Web
+      working-directory: DotnetTemplate.Web
       run: npm run build
