@@ -13,8 +13,8 @@ jobs:
 
     - name: C#
       run: |
-      dotnet build
-      dotnet test
+        dotnet build
+        dotnet test
 
     - name: typescript 
       working-directory: DotnetTemplate.Web
