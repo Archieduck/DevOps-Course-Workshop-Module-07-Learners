@@ -19,5 +19,6 @@ jobs:
 
     - name: typescript 
       working-directory: DotnetTemplate.Web
-      run: npm install
-      run: npm run build
+      run: |
+        npm install
+        npm run build
