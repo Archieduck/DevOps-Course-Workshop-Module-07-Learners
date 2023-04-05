@@ -26,12 +26,12 @@ jobs:
 
     - name: Report Status
       if: always()
-      uses: ravsamhq/notify-slack-action@v1
+      uses: archieduck/notify-slack-action@v1
       with: 
         status: ${{ job.status }}
         notify_when: 'failure'
       env:
-        SLACK_WEBHOOK_URL: ${{ secrets.ACTION_MONITORING_SLACK }}
+        SLACK_WEBHOOK_URL: https://hooks.slack.com/services/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
       status: ${{ job.status }} # required
       notify_when: 'failure'
       notification_title: '{workflow} has {status_message}'
