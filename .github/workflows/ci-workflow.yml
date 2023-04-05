@@ -12,7 +12,7 @@ jobs:
       run: echo 'hello world'
 
     - name: C#
-      run: | 
+      run: |
       dotnet build
       dotnet test
 
