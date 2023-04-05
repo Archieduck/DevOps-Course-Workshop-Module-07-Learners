@@ -5,6 +5,8 @@ jobs:
   build:
     name: Build and test
     runs-on: ubuntu-latest      # Sets the build environment a machine with the latest Ubuntu installed
+    env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
     steps:
     - uses: actions/checkout@v2 # Adds a step to checkout the repository code
 
@@ -24,21 +26,10 @@ jobs:
         npm run lint
         npm t
 
-    - name: Report Status
-      if: always()
-      uses: archieduck/notify-slack-action@v1
+    - name: Slack Notification
+      uses: act10ns/slack@v1
       with: 
         status: ${{ job.status }}
-        notify_when: 'failure'
-      env:
-        SLACK_WEBHOOK_URL: https://hooks.slack.com/services/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
-      status: passed # required
-      notify_when: 'failure'
-      notification_title: '{workflow} has {status_message}'
-      message_format: '{emoji} *{workflow}* {status_message} in <{repo_url}|{repo}>'
-      footer: 'Linked to Repo <{repo_url}|{repo}>'
-      notify_when: 'failure'
-      mention_users: 'U0160UUNH8S,U0080UUAA9N'
-      mention_users_when: 'failure,warnings'
-      mention_groups: 'SAZ94GDB8'
-      mention_groups_when: 'failure,warnings'
+        channel: '#dev'
+        message: Deployed {{ env.GITHUB_REF_NAME }} branch Successfully
+      if: always()
