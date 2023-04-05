@@ -16,3 +16,7 @@ jobs:
 
     - name: C# tests
       run: dotnet test
+
+    - name: typescript 
+      uses: /DotnetTemplate.Web
+      run: npm run build
