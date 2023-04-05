@@ -1,6 +1,6 @@
 # Workshop Module 07
 
-![example workflow](https://github.com/github/docs/github/workflows/ci-workflow.yml/badge.svg?event=push)
+![example workflow](https://github.com/github/docs/actions/github/workflows/ci-workflow.yml/badge.svg?event=push)
 
 This repository is for learners on Corndel's DevOps apprenticeship.
 
